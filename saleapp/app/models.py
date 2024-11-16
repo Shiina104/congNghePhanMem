@@ -28,6 +28,7 @@ class Product(db.Model):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
+
         # c1 = Category(name="Mobile")
         # c2 = Category(name="Tablet")
         # c3 = Category(name="Laptop")
@@ -65,30 +66,37 @@ if __name__ == '__main__':
             "category_id": 2
         }, {
             "id": 5,
-            "name": "iPhone 7 Plus",
+            "name": "iPhone 8 Plus",
             "description": "Apple, 32GB, RAM: 3GB, iOS13",
             "price": 17000000,
             "image": "https://res.cloudinary.com/dxxwcby8l/image/upload/v1647056401/ipmsmnxjydrhpo21xrd8.jpg",
             "category_id": 1
         }, {
             "id": 6,
-            "name": "iPad Pro 2020",
+            "name": "iPad Pro 2021",
             "description": "Apple, 128GB, RAM: 6GB",
             "price": 37000000,
             "image": "https://res.cloudinary.com/dxxwcby8l/image/upload/v1646729533/zuur9gzztcekmyfenkfr.jpg",
             "category_id": 2
         }, {
             "id": 7,
-            "name": "Galaxy Note 10 Plus",
+            "name": "Galaxy Note 11 Plus",
             "description": "Samsung, 64GB, RAML: 6GB",
             "price": 24000000,
             "image": "https://res.cloudinary.com/dxxwcby8l/image/upload/v1647248722/r8sjly3st7estapvj19u.jpg",
             "category_id": 1
         }, {
             "id": 8,
-            "name": "Galaxy Tab S9",
+            "name": "Galaxy Tab S10",
             "description": "Apple, 128GB, RAM: 6GB",
             "price": 37000000,
+            "image": "https://res.cloudinary.com/dxxwcby8l/image/upload/v1646729533/zuur9gzztcekmyfenkfr.jpg",
+            "category_id": 2
+        }, {
+            "id": 9,
+            "name": "Hello",
+            "description": "Hue gfg sad",
+            "price": 999999999,
             "image": "https://res.cloudinary.com/dxxwcby8l/image/upload/v1646729533/zuur9gzztcekmyfenkfr.jpg",
             "category_id": 2
         }]

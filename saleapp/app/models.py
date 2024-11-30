@@ -12,6 +12,7 @@ class UserRole(RoleEnum):
 
 
 class User(db.Model, UserMixin):
+    __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50))
     username = Column(String(50), unique=True, nullable=False)
@@ -23,15 +24,17 @@ class User(db.Model, UserMixin):
 
 
 class Category(db.Model):
+    __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50), unique=True)
-    products = relationship('Product', backref='category', lazy=True)
+    # products = relationship('Product', backref='category', lazy=True)
 
     def __str__(self):
         return self.name
 
 
 class Product(db.Model):
+    __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50), nullable=False)
     description = Column(String(255), nullable=True)
@@ -51,8 +54,8 @@ if __name__ == '__main__':
         # u = User(name='admin', username='admin', password=str(hashlib.md5('123456'.encode('utf-8')).hexdigest()),
         #          user_role=UserRole.ADMIN)
         # db.session.add(u)
-        # db.session.commit()
-
+        # # db.session.commit()
+        #
         # c1 = Category(name="Mobile")
         # c2 = Category(name="Tablet")
         # c3 = Category(name="Laptop")
